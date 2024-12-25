@@ -42,14 +42,14 @@ function Skills() {
     return (
         <>
             <Container>
-                <div id="skills" className='w-full h-[80%] flex flex-col items-center gap-4' data-aos="fade-up">
+                <div id="skills" className='w-full flex flex-col items-center gap-6 px-4 md:px-0' data-aos="fade-up">
                     <div className='w-full flex justify-center text-2xl font-thin my-4'>
-                        <h1 className='text-4xl md:text-4xl font-bold text-sky-500'>Technical Skills</h1>
+                        <h1 className='text-3xl md:text-4xl font-bold text-sky-500'>Technical Skills</h1>
                     </div>
 
-                    <div className='w-auto bg-sky-100 flex justify-around md:gap-4 py-2 px-2 border-2 border-sky-300 rounded-md'>
+                    <div className='w-auto bg-sky-100 flex flex-wrap justify-around md:gap-4 py-2 px-4 border-2 border-sky-300 rounded-md'>
                         <button
-                            className={`w-[50%] py-2 px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
+                            className={`w-[40%] md:w-auto py-2 px-4 md:px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
                                 clicked === "languages" ? "bg-sky-500 text-white" : "text-sky-500"
                             }`}
                             onClick={() => setClicked("languages")}
@@ -57,15 +57,16 @@ function Skills() {
                             Languages
                         </button>
                         <button
-                            className={`w-[50%] py-2 px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
+                            className={`w-[40%] md:w-auto py-2 px-4 md:px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
                                 clicked === "frameworks" ? "bg-sky-500 text-white" : "text-sky-500"
                             }`}
                             onClick={() => setClicked("frameworks")}
                         >
-                            Frameworks/Libraries
+                            Frameworks/<br />
+                            Libraries
                         </button>
                         <button
-                            className={`w-[50%] py-2 px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
+                            className={`w-[40%] md:w-auto py-2 px-4 md:px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
                                 clicked === "databases" ? "bg-sky-500 text-white" : "text-sky-500"
                             }`}
                             onClick={() => setClicked("databases")}
@@ -73,7 +74,7 @@ function Skills() {
                             Databases
                         </button>
                         <button
-                            className={`w-[50%] py-2 px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
+                            className={`w-[40%] md:w-auto py-2 px-4 md:px-6 rounded-md hover:bg-sky-500 hover:text-white text-sm md:font-semibold ${
                                 clicked === "tools" ? "bg-sky-500 text-white" : "text-sky-500"
                             }`}
                             onClick={() => setClicked("tools")}
@@ -83,13 +84,13 @@ function Skills() {
                     </div>
 
                     {/* Grid */}
-                    <div className='grid grid-cols-3 w-full md:grid-cols-4 md:w-[50%] gap-10 my-4'>
+                    <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 w-full gap-6 md:gap-10 my-4'>
                         {data
                             .filter((item) => item.tag === clicked)
                             .map((ele) => (
                                 <div className='flex flex-col items-center gap-2' key={ele.id}>
-                                    <img src={ele.imageUrl} alt={ele.text} className='size-16 bg-sky-100 p-2 rounded-full border-2 border-sky-300' />
-                                    <h1 className='text-sky-500'>{ele.text}</h1>
+                                    <img src={ele.imageUrl} alt={ele.text} className='w-16 h-16 bg-sky-100 p-2 rounded-full border-2 border-sky-300' />
+                                    <h1 className='text-sky-500 text-sm md:text-base'>{ele.text}</h1>
                                 </div>
                             ))}
                     </div>

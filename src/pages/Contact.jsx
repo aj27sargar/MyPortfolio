@@ -19,26 +19,27 @@ const Contact = () => {
         }));
     };
 
-    const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        to_name: "app",
-        message: formData.message,
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // EmailJS configuration
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+        };
+
         try {
-            const result = await emailjs.send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            await emailjs.send(
+                "service_pty4mo3", // Your EmailJS Service ID
+                "template_2jnw0fq", // Your EmailJS Template ID
                 templateParams,
-                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+                "1HQ3bb3yMxGDjzsvS" // Your EmailJS Public Key
             );
             toast.success("Thank you for reaching out. I will get back to you soon.");
         } catch (error) {
-            console.log(error);
-            toast.error("Error while sending mail");
+            console.error(error);
+            toast.error("Error while sending your message. Please try again.");
         } finally {
             setFormData({ name: "", email: "", message: "" });
         }
