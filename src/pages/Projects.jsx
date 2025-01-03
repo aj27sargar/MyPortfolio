@@ -67,6 +67,7 @@ function Projects() {
                                 Creates various legal documents such as contracts, agreements, and affidavits with ease and precision, reducing manual effort.
                             </p>
                             <div className="flex w-full gap-4">
+                            
                                 <a href="https://github.com/aj27sargar/AI-Based-Legal-Adviser.git" target="_blank" rel="noopener noreferrer">
                                     <div className="text-sm font-bold border-2 border-sky-500 text-sky-500 px-2 py-2 md:px-6 md:py-2 hover:bg-sky-500 hover:text-white">Source Code</div>
                                 </a>
@@ -93,6 +94,9 @@ function Projects() {
                                 Responsive Design: The app is optimized for various devices, offering a smooth experience on desktops, tablets, and smartphones.
                             </p>
                             <div className="flex w-full gap-4">
+                            <a href="https://tourism-app-flame.vercel.app/" target="_blank">
+                                        <div className='text-sm font-bold border-2 border-sky-500 text-sky-500 px-2 py-2 md:px-6 md:py-2 hover:bg-sky-500 hover:text-white'>Live Demo</div>
+                                    </a>
                                 <a href="https://github.com/aj27sargar/Tourism-App.git" target="_blank" rel="noopener noreferrer">
                                     <div className="text-sm font-bold border-2 border-sky-500 text-sky-500 px-2 py-2 md:px-6 md:py-2 hover:bg-sky-500 hover:text-white">Source Code</div>
                                 </a>
