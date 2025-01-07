@@ -72,7 +72,7 @@ function LandingPage() {
                         </p>
 
                         <a
-                            href="https://drive.google.com/file/d/1pUo96zpT-GKq0Wjk_fxKxtuGtAimX1cW/view?usp=drive_link"
+                            href="https://drive.google.com/file/d/1SnPvrPx3Wmpjtd0Z0wIejRUkcNdZeLit/view?usp=drive_linkk"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
